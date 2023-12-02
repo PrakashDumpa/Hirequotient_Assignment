@@ -1,0 +1,20 @@
+.form_container {
+  height: 38px;
+  display: flex;
+  align-items: center;
+  /* background-color: rgb(247, 239, 239); */
+}
+
+.search_input {
+  width: 88%;
+  height: 100%;
+}
+
+.bg_color {
+  background-color: #b0aeae;
+}
+
+.table_body {
+  height: 630px;
+  overflow: auto;
+}
