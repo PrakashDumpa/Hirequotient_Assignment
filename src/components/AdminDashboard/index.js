@@ -90,6 +90,16 @@ const AdminDashboard = () => {
 
   const onClickPageNationButton = (event) => {
     setActivePage(parseInt(event.target.value));
+    setCheckboxList([]);
+  };
+
+  const handleMultipleSelectButton = (event) => {
+    if (event.target.checked) {
+      let chekList = userShowList.map((e) => e.id);
+      setCheckboxList([...chekList]);
+    } else {
+      setCheckboxList([]);
+    }
   };
 
   useEffect(() => {
@@ -128,7 +138,11 @@ const AdminDashboard = () => {
           <thead className="">
             <tr>
               <th>
-                <input type="checkbox" className="" />
+                <input
+                  type="checkbox"
+                  className=""
+                  onChange={handleMultipleSelectButton}
+                />
               </th>
               <th>Name</th>
               <th>Email</th>
